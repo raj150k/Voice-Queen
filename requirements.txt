@@ -1,0 +1,10 @@
+python-telegram-bot==20.7
+flask==3.0.0
+werkzeug==3.0.1
+requests==2.31.0
+gunicorn==21.2.0
+ffmpeg-python==0.2.0
+numpy==1.24.3
+soundfile==0.12.1
+librosa==0.10.1
+pydub==0.25.1
