@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+env/
+venv/
+
+# ডাটাবেস
+*.db
+
+# কনফিগ
+bot/config.py
+
+# আপলোড
+uploads/
+temp/
+
+# OS
+.DS_Store
+Thumbs.db
