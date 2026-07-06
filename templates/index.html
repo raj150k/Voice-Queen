@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GirlicBot — AI Voice Changer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🎀 GirlicBot</h1>
+            <p class="tagline">AI Voice Changer — Session to Session Authentication</p>
+            
+            <div class="stats-bar">
+                <span>👥 ১০০০+ ইউজার</span>
+                <span>🔄 ৫০০০+ কনভার্সন</span>
+                <span>🎤 ৪টি ভয়েস মডেল</span>
+            </div>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <div class="buttons">
+                {% if session.user_id %}
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-primary">📊 ড্যাশবোর্ড</a>
+                    <a href="{{ url_for('logout') }}" class="btn btn-secondary">🚪 লগআউট</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="btn btn-primary">🔑 লগইন</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+  </html>
